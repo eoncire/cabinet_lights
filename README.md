@@ -24,7 +24,23 @@ https://youtu.be/GbK3mrdwiZg
 
 Here is a crappy hand drawn circuit diagram for the direct 12v version.  One board in my setup is using a buck converter (pictured above), the other is 12v direct to the VIN and GND pins on the ESP32.  TEST YOUR BOARD FIRST.  Not all ESP boards are created equal, trust me.  The reason I'm using this one is because it uses the AMS1117 voltage regulator.  The spec sheet for that says it can handle 12v.  My expericne with that regulator is that it will definately handle 12v, but it does get a little warm.  I ran a couple NodeMCU boards off 12v over the holidays for addressable LED controllers, they held up just fine. One batch of NodeMCUs i bought had a different regulator.  That one did not appreciate being fed 12v and blew up, you can see the burn marks on the breadboard in the pics on this writeup.
 
-![2](https://i.imgur.com/eU5YqFX.png)
+![Awesome Hand Drawn "Schematic"](https://i.imgur.com/eU5YqFX.png)
 
 12v is fed to the ESP32 via VIN and GND pins.  I'm using GPIO19 on the ESP32, there are many PWM capable pins, that's just the one i chose.  The ouput from the pin is fed through a 10k ohm resistor, then to the GATE pin on the MOSFET, check the datasheet for the pinout if you're unsure.  The SOURCE pin on the MOSFET is fed GND from the 12v PSU.  The DRAIN pin on the MOSFET is the output, that goes to the terminal block for the GND to the LED strip.  
+
+![12v Direct Board](https://i.imgur.com/Y6J6LuR.png)
+
+# LEDs
+
+I measured and cut to length the 3 strips I needed for the 3 sections.  Two of them run off one board, the 3rd off the other.  I soldered some speaker wire leads with enough length to get up to the controller.  I bent the soldered connections 90 degrees so when the strips are adhered to the underside of the cabinet the lead will go straight up into a hole that was drilled.
+
+![LED Solder Connection](https://i.imgur.com/UfGgnUc.png)
+
+The wires hide nicely inside the face of the cabinet frame, the shelves pinch the wires in place so they really aren't visible in the main cabinets.  You can see the controller in the cabinet above the microwave.
+
+![5](https://i.imgur.com/E7ML5zl.png)
+
+How you install the LEDs is up to you, here are a couple more installation pics.
+
+
 
