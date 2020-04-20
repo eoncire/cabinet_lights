@@ -42,5 +42,9 @@ The wires hide nicely inside the face of the cabinet frame, the shelves pinch th
 
 How you install the LEDs is up to you, here are a couple more installation pics.
 
-
+![6](https://i.imgur.com/CZEmyPY.png)
+![7](https://i.imgur.com/hCcQBKr.png)
+![8](https://i.imgur.com/FBe5AZv.png)
+![9](https://i.imgur.com/atEh0PL.png)
+![10](https://i.imgur.com/2AB7alg.png)
 
