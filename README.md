@@ -48,3 +48,12 @@ How you install the LEDs is up to you, here are a couple more installation pics.
 ![9](https://i.imgur.com/atEh0PL.png)
 ![10](https://i.imgur.com/2AB7alg.png)
 
+# Software
+
+The ESP32 is running ESPHome.  The code is here --> https://pastebin.com/KgZyQPDb  I won't dive into the details there, it's pretty straight forward.  Using the LED_C PWM output in ESPHome.
+
+I use HomeAssistant for my home automations.  The lights show up in HA as a dimmable light.
+
+![11](https://i.imgur.com/7RBtWdR.png)
+
+I do have two controllers for the zones but I want them to work as one by default.  I created a light group in HA in my config.yaml and added the two entities (light.cabinet_1 and light.cabinet_2) then called it Cabinet Lights.
