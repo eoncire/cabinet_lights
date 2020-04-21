@@ -56,4 +56,19 @@ I use HomeAssistant for my home automations.  The lights show up in HA as a dimm
 
 ![11](https://i.imgur.com/7RBtWdR.png)
 
-I do have two controllers for the zones but I want them to work as one by default.  I created a light group in HA in my config.yaml and added the two entities (light.cabinet_1 and light.cabinet_2) then called it Cabinet Lights.
+I do have two controllers for the zones but I want them to work as one by default.  I created a light group in HA in my config.yaml and added the two entities (light.cabinet_1 and light.cabinet_2) then called it Cabinet Lights.  Yaml for that here --> https://pastebin.com/Pm9umXtU
+
+# Controlling Via Dimmer Switch & NodeRed
+
+I had an extra MartinJerry wifi dimmer wall swtich installed that wasn't being used for anything useful.  I re-wired some lights in my kitchen, this switch location is right next to the cabinets which is nice.  It was part of a 3-way switch setup that I didn't like so I installed the dimmer but didn't hook it up to the light, just powered it on so it is essentially a software swtich.  The swtich is flashed with ESPHome and I expose the physical buttons to HA.  Code for that switch is here --->  https://pastebin.com/iqPkpLJr  So now when the physical buttons are pressed on the dimmer (that isn't actually wired to a light) we can pick it up in HA (NodeRed) and do stuff.
+
+I'm using NodeRed, the flow is here -->  https://pastebin.com/XwdejWdy
+![12](https://i.imgur.com/xbQ8eBb.png)
+
+When the up button is clicked, the brightness of the light group is increased 15%, when down is clicked, brightness is reduced 15%.  If the up button is pressed for more than 500ms the brightness is taken to 100%.  When the power button is pressed and the lights are on, they are turned off.  When the power button is pressed and the lights are off, they're brought up to 50%.  This is a great way to use a "dummy" switch / device to control other devices that are not physically linked.  There is zero physical control of the LED strips which does mean that if HA / NodeRed take a crap, I can't control these lights (for now).
+
+# Automating
+
+![13](https://i.imgur.com/hTwNEgC.png)
+
+I haven't automated THESE lights yet, I need to find a good place to shoe-horn them into my existing spider web of kitchen lighting automation....  Hey, they work, and the wife likes them, what more can you ask for?  ;-)
